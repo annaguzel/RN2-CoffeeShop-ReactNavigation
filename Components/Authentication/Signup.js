@@ -6,7 +6,7 @@ import { Text } from "native-base";
 
 import styles from "./styles";
 
-const Signup = () => (
+const Signup = ({navigation}) => (
   <View style={styles.authContainer}>
     <Text style={styles.authTitle}>Signup</Text>
     <TextInput
@@ -21,9 +21,9 @@ const Signup = () => (
       secureTextEntry={true}
     />
     <TouchableOpacity style={styles.authButton}>
-      <Text style={styles.authButtonText}>Sign up</Text>
+      <Text onPress={()=>navigation.navigate("CoffeeList")} style={styles.authButtonText}>Sign up</Text>
     </TouchableOpacity>
-    <Text style={styles.authOther}>Click here to log in!</Text>
+    <Text onPress={()=>navigation.navigate("Login")}style={styles.authOther}>Click here to log in!</Text>
   </View>
 );
 

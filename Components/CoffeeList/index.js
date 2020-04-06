@@ -9,9 +9,9 @@ import coffeeshops from "./data";
 // Component
 import CoffeeItem from "./CoffeeItem";
 
-const CoffeeList = () => {
+const CoffeeList = ({navigation}) => {
   const coffeeshopList = coffeeshops.map((coffeeshop) => (
-    <CoffeeItem coffeeshop={coffeeshop} key={coffeeshop.id} />
+    <CoffeeItem navigation={navigation} coffeeshop={coffeeshop} key={coffeeshop.id} />
   ));
   return (
     <Content>
